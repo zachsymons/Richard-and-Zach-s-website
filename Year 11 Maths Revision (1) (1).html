@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Year 11 Maths Revision</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>
+:root{--bg:#f4f6fb;--card:#fff;--tx:#1d2340;--mu:#6b7194;--ac:#5b5bf0;--bd:#e3e6f2;--ok:#16a34a;--no:#e11d48;--sh:0 2px 10px rgba(30,40,90,.08);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0f1220;--card:#1a1e33;--tx:#e8ebff;--mu:#9aa0c7;--bd:#2c3152;--sh:0 2px 12px rgba(0,0,0,.45)}}
+:root[data-theme=dark]{--bg:#0f1220;--card:#1a1e33;--tx:#e8ebff;--mu:#9aa0c7;--bd:#2c3152;--sh:0 2px 12px rgba(0,0,0,.45)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+button{font:inherit;color:inherit;cursor:pointer}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;align-items:center;gap:10px;padding:10px 16px;background:var(--card);border-bottom:1px solid var(--bd)}
+.brand{font-weight:800;font-size:18px;margin-right:auto}.tabs,.tools{display:flex;gap:8px}
+.tab,.ic,.btn{border:1px solid var(--bd);background:var(--card);border-radius:12px;padding:8px 14px}
+.tab.on,.pri{background:var(--ac);color:#fff;border-color:var(--ac)}
+.hv{transition:transform .18s,box-shadow .18s,background .18s}
+.hv:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 0 0 2px var(--c,var(--ac)),var(--sh)}
+.hv:active{transform:scale(.97)}
+main{max-width:980px;margin:0 auto;padding:20px 16px 100px}
+.up{animation:up .45s both}@keyframes up{from{opacity:0;transform:translateY(14px)}}
+.hero{display:flex;gap:20px;flex-wrap:wrap;align-items:center;justify-content:space-between;background:linear-gradient(135deg,#5b5bf0,#8b5cf6);color:#fff;border-radius:20px;padding:24px}
+.hero h1{margin:0 0 4px}.hero p{margin:0;opacity:.9;max-width:460px}.stat{min-width:230px}.stat b{font-size:30px}.stat span{margin-left:6px}
+.hero .bar{background:#fff4;margin:6px 0}.hero .bar i{background:#fff}
+.bar{height:8px;background:var(--bd);border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:var(--c,var(--ac));border-radius:9px;transition:width .6s}
+h2{border-left:5px solid var(--c,var(--ac));padding-left:10px;margin:28px 0 12px}h2 small,.mu,small{color:var(--mu);font-weight:400}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.card{position:relative;text-align:left;background:var(--card);border:1px solid var(--bd);border-top:4px solid var(--c);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:10px;box-shadow:var(--sh)}
+.card .nm{font-weight:650}.card em{position:absolute;top:8px;right:10px;color:var(--ok);font-style:normal;font-weight:800}
+.top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px}.top b,.top h2{margin:0;flex:1;border:0;padding:0}
+.pill{background:var(--c,var(--ac));color:#fff;border-radius:99px;padding:4px 14px;font-weight:700}
+.qbox{background:var(--card);border:1px solid var(--bd);border-left:5px solid var(--c);border-radius:16px;padding:22px;font-size:20px;font-weight:600;margin:10px 0 16px;box-shadow:var(--sh);white-space:pre-wrap}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:560px){.opts{grid-template-columns:1fr}}
+.opt{display:flex;align-items:center;gap:12px;text-align:left;background:var(--card);border:2px solid var(--bd);border-radius:14px;padding:14px;font-size:18px}
+.opt i{font-style:normal;width:30px;height:30px;border-radius:50%;background:var(--bd);display:grid;place-items:center;font-weight:700;flex:none}
+.opt.good{background:#16a34a22;border-color:var(--ok);animation:pop .4s}.opt.bad{background:#e11d4822;border-color:var(--no);animation:shake .4s}.opt.dim{opacity:.5}
+@keyframes pop{50%{transform:scale(1.05)}}@keyframes shake{25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+.fb{margin:16px 0 8px;padding:12px 16px;border-radius:12px;font-weight:600;animation:up .3s}.fb.ok{background:#16a34a22;color:var(--ok)}.fb.no{background:#e11d4822;color:var(--no)}.fb.hp{background:#5b5bf022;color:var(--ac)}
+.steps{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:14px 14px 14px 40px;margin:0 0 14px}.steps li{margin:6px 0;animation:up .4s both}.steps li:last-child{font-weight:700;color:var(--ok)}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.ring{width:150px;height:150px;border-radius:50%;background:conic-gradient(var(--c) calc(var(--p)*1%),var(--bd) 0);display:grid;place-items:center;margin:20px auto;position:relative}.ring::before{content:"";position:absolute;inset:12px;background:var(--card);border-radius:50%}.ring b{position:relative;font-size:32px}
+.scene{perspective:1100px;height:260px;margin:18px 0}.fcard{position:relative;height:100%;transform-style:preserve-3d;transition:transform .6s cubic-bezier(.4,.2,.2,1);cursor:pointer}.fcard.flip{transform:rotateY(180deg)}
+.scene:hover .fcard:not(.flip){transform:rotateY(-6deg) scale(1.02)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:20px;background:var(--card);border:2px solid var(--c);box-shadow:var(--sh);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:24px;text-align:center}
+.face h3{margin:0;font-size:26px}.face p{margin:0;font-size:19px}.back{transform:rotateY(180deg);background:var(--c);color:#fff}.chip{font-size:12px;text-transform:uppercase;letter-spacing:.08em;opacity:.75}
+.slide{animation:sl .35s}@keyframes sl{from{opacity:0;transform:translateX(40px)}}
+select,textarea{font:inherit;color:var(--tx);background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:8px}textarea{width:100%;height:90px;margin-top:6px}
+.dr{position:fixed;right:max(14px,env(safe-area-inset-right,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));width:min(460px,calc(100vw - 20px));max-height:calc(100% - 80px);overflow:auto;z-index:20;background:var(--card);border:1px solid var(--bd);border-radius:18px;box-shadow:0 12px 40px rgba(0,0,0,.28);padding:10px 12px 12px;opacity:0;transform:translateY(24px) scale(.96);pointer-events:none;transition:.25s}
+.dr.on{opacity:1;transform:none;pointer-events:auto}.dh{display:flex;align-items:center;gap:6px;margin-bottom:8px;cursor:move;touch-action:none}.dh b{flex:1}.dh .ic{padding:2px 9px}
+#cd{background:var(--bg);border-radius:12px;padding:10px 14px;text-align:right;min-height:78px;margin-bottom:8px;word-break:break-all}#ce{font-size:20px}#cr{font-size:28px;font-weight:700;color:var(--ac)}
+#ck{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}#ck button{padding:12px 0;border-radius:10px;border:1px solid var(--bd);background:var(--card);font-size:16px;transition:transform .12s,box-shadow .12s}#ck button:hover{transform:scale(1.08);box-shadow:0 0 0 2px var(--ac)}#ck .op{background:#5b5bf022}#ck .eq{background:var(--ac);color:#fff}
+.tb{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-bottom:8px}.tb .btn{padding:5px 10px}.tb .on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.sw{width:24px;height:24px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px var(--bd);padding:0}
+#pv{display:inline-block;background:var(--tx);border-radius:50%;flex:none}
+.cw{position:relative;background:#fff;border-radius:12px;border:1px solid var(--bd);overflow:hidden}.cw canvas{width:100%;display:block;cursor:none;touch-action:none}
+#ring{position:absolute;border:2px solid #888;border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;display:none}
+.cf{position:fixed;top:-30px;font-size:24px;animation:fall 2.4s ease-in forwards;z-index:30;pointer-events:none}@keyframes fall{to{transform:translateY(110vh) rotate(540deg)}}
+
+.scene.dg{height:auto}.scene.dg .fcard{height:auto;display:grid}.scene.dg .face{position:relative;grid-area:1/1;align-items:stretch;justify-content:center;text-align:left;padding:18px 22px}
+.scene.dg .chip{align-self:flex-start}.back.dgb{background:var(--card);color:var(--tx)}
+.dgi{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;align-items:center}.dsv svg{width:100%;max-width:300px;display:block;margin:0 auto}
+.face .dq{font-size:18px;line-height:1.6;margin:6px 0 0}.face .da{font-size:28px;font-weight:700;color:var(--ac);margin:6px 0}.face .dw{font-size:15px;color:var(--mu);margin:0 0 8px}
+</style></head><body>
+<nav><div class="brand">∑ Maths Revision</div>
+<div class="tabs"><button class="tab hv on" id="t0" onclick="go('home')">Topics</button><button class="tab hv" id="t1" onclick="fcStart()">Flashcards</button></div>
+<div class="tools"><button class="ic hv" onclick="tool('calc')" title="Calculator">🧮</button><button class="ic hv" onclick="tool('pad')" title="Notepad">✏️</button><button class="ic hv" onclick="th()" title="Light / dark">🌓</button></div></nav>
+<main id="app"></main>
+<aside class="dr" id="dr">
+<div class="dh" id="dh"><b id="dt">🧮 Calculator</b><button class="ic hv" onclick="tool('calc',1)">🧮</button><button class="ic hv" onclick="tool('pad',1)">✏️</button><button class="ic hv" onclick="$('#dr').classList.remove('on')">✕</button></div>
+<div id="calc"><div id="cd"><div id="ce">0</div><div id="cr"></div></div><div id="ck"></div></div>
+<div id="pad" style="display:none"><div class="tb">
+<button class="btn hv on" id="bp" onclick="stl('pen')">✏️ Pen</button><button class="btn hv" id="be" onclick="stl('er')">🧽 Eraser</button>
+<span id="sws"></span><input type="range" id="sl" min="1" max="80" value="3" oninput="ssz(+this.value)" style="width:90px"><span id="pv"></span>
+<button class="btn hv" onclick="und()">↶ Undo</button><button class="btn hv" onclick="clr()">🗑 Clear</button></div>
+<div class="cw"><canvas id="cv" width="900" height="560"></canvas><div id="ring"></div></div></div>
+</aside>
+<script>
+(function(){
+var D = Math.PI / 180;
+  var R = function (x) { return Math.round(x * 10) / 10; };
+  var P = function (c, rr, a) { return [c[0] + rr * Math.cos(a * D), c[1] - rr * Math.sin(a * D)]; };
+  var ang = function (v, p) { return Math.atan2(-(p[1] - v[1]), p[0] - v[0]) / D; };
+  var unit = function (v, p) { var dx = p[0] - v[0], dy = p[1] - v[1], l = Math.hypot(dx, dy); return [dx / l, dy / l]; };
+  var T = 'var(--tx)', T2 = 'var(--mu)', ACC = 'var(--ac)';
+
+  var sv = function (x) { return '<svg viewBox="0 0 280 210" role="img" aria-label="Diagram for the question">' + x + '</svg>'; };
+  var ln = function (a, b, dash) { return '<line x1="' + R(a[0]) + '" y1="' + R(a[1]) + '" x2="' + R(b[0]) + '" y2="' + R(b[1]) + '" stroke="' + (dash ? T2 : T) + '" stroke-width="' + (dash ? 1 : 1.5) + '" ' + (dash ? 'stroke-dasharray="4 3"' : '') + '/>'; };
+  var poly = function (pts) { return '<polygon points="' + pts.map(function (p) { return R(p[0]) + ',' + R(p[1]); }).join(' ') + '" fill="var(--bg)" stroke="' + T + '" stroke-width="1.5" stroke-linejoin="round"/>'; };
+  var dots = function () { return Array.prototype.slice.call(arguments).map(function (p) { return '<circle cx="' + R(p[0]) + '" cy="' + R(p[1]) + '" r="2.5" fill="' + T + '"/>'; }).join(''); };
+  var txt = function (x, y, s, o) {
+    o = o || {};
+    return '<text x="' + R(x) + '" y="' + R(y) + '" text-anchor="' + (o.a || 'middle') + '" dominant-baseline="central" font-size="' + (o.s || 13) + '" font-weight="' + (o.w || 400) + '" fill="' + (o.c || T) + '" style="paint-order:stroke;stroke:var(--card);stroke-width:3px">' + s + '</text>';
+  };
+  var lab = function (x, y, s) { return txt(x, y, s, { w: 500 }); };
+  var val = function (t, s, q) { return txt(t[0], t[1], s, { w: 500, c: q ? ACC : T }); };
+  var at = function (p, deg, len) { return [p[0] + len * Math.cos(deg * D), p[1] - len * Math.sin(deg * D)]; };
+  function wedge(v, p1, p2, rad, s, tr, q, pos) {
+    var a1 = ang(v, p1), a2 = ang(v, p2), d = (((a2 - a1) % 360) + 540) % 360 - 180;
+    var st = [v[0] + rad * Math.cos(a1 * D), v[1] - rad * Math.sin(a1 * D)];
+    var en = [v[0] + rad * Math.cos(a2 * D), v[1] - rad * Math.sin(a2 * D)];
+    var m = a1 + d / 2, t = pos || [v[0] + tr * Math.cos(m * D), v[1] - tr * Math.sin(m * D)];
+    return '<path d="M' + R(v[0]) + ',' + R(v[1]) + ' L' + R(st[0]) + ',' + R(st[1]) + ' A' + rad + ',' + rad + ' 0 0 ' + (d > 0 ? 0 : 1) + ' ' + R(en[0]) + ',' + R(en[1]) + ' Z" fill="#EF9F27" fill-opacity=".45" stroke="#BA7517" stroke-width=".8"/>' + (s === '' ? '' : val(t, s, q));
+  }
+  function arc(v, p1, p2, rad) {
+    var a1 = ang(v, p1), a2 = ang(v, p2), d = (((a2 - a1) % 360) + 540) % 360 - 180;
+    var st = [v[0] + rad * Math.cos(a1 * D), v[1] - rad * Math.sin(a1 * D)];
+    var en = [v[0] + rad * Math.cos(a2 * D), v[1] - rad * Math.sin(a2 * D)];
+    return '<path d="M' + R(st[0]) + ',' + R(st[1]) + ' A' + rad + ',' + rad + ' 0 0 ' + (d > 0 ? 0 : 1) + ' ' + R(en[0]) + ',' + R(en[1]) + '" fill="none" stroke="#BA7517" stroke-width="1.5"/>';
+  }
+  function ra(v, p1, p2, s) {
+    s = s || 9;
+    var u = unit(v, p1), w = unit(v, p2);
+    var a = [v[0] + u[0] * s, v[1] + u[1] * s], b = [a[0] + w[0] * s, a[1] + w[1] * s], c = [v[0] + w[0] * s, v[1] + w[1] * s];
+    return '<path d="M' + R(a[0]) + ',' + R(a[1]) + ' L' + R(b[0]) + ',' + R(b[1]) + ' L' + R(c[0]) + ',' + R(c[1]) + '" fill="none" stroke="' + T + '" stroke-width="1"/>';
+  }
+  var tick = function (a, b) {
+    var m = [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2], u = unit(a, b), n = [-u[1], u[0]];
+    return ln([m[0] - n[0] * 5, m[1] - n[1] * 5], [m[0] + n[0] * 5, m[1] + n[1] * 5]);
+  };
+  var par = function (p, deg) {
+    var u = [Math.cos(deg * D), -Math.sin(deg * D)], n = [-u[1], u[0]];
+    var a = [p[0] - 7 * u[0] + 5 * n[0], p[1] - 7 * u[1] + 5 * n[1]], b = [p[0] - 7 * u[0] - 5 * n[0], p[1] - 7 * u[1] - 5 * n[1]];
+    return '<path d="M' + R(a[0]) + ',' + R(a[1]) + ' L' + R(p[0]) + ',' + R(p[1]) + ' L' + R(b[0]) + ',' + R(b[1]) + '" fill="none" stroke="' + T + '" stroke-width="1.5"/>';
+  };
+  var tri = function (A, B, aA, aB) {
+    var aC = 180 - aA - aB, L = Math.hypot(B[0] - A[0], B[1] - A[1]), t = L * Math.sin(aB * D) / Math.sin(aC * D);
+    return [A[0] + t * Math.cos(aA * D), A[1] - t * Math.sin(aA * D)];
+  };
+  var north = function (v, name) { return ln(v, [v[0], v[1] - 55], true) + lab(v[0], v[1] - 66, 'N'); };
+  var barc = function (v, b, rad) {
+    var s = [v[0], v[1] - rad], e = [v[0] + rad * Math.sin(b * D), v[1] - rad * Math.cos(b * D)];
+    return '<path d="M' + R(s[0]) + ',' + R(s[1]) + ' A' + rad + ',' + rad + ' 0 ' + (b > 180 ? 1 : 0) + ' 1 ' + R(e[0]) + ',' + R(e[1]) + '" fill="none" stroke="#BA7517" stroke-width="2"/>';
+  };
+  /* parallel lines helper: two horizontal lines cut by a transversal at dir degrees */
+  var parallels = function (dir, x2) {
+    var P2 = [x2, 140], t = 65 / Math.sin(dir * D), P1 = [P2[0] + t * Math.cos(dir * D), 75];
+    return { P1: P1, P2: P2, ta: at(P2, dir + 180, 38), tb: at(P1, dir, 38),
+      draw: ln([30, 75], [250, 75]) + ln([30, 140], [250, 140]) + par([240, 75], 0) + par([240, 140], 0) };
+  };
+
+  
+var C=[110,100],r=70;
+var circ=function(c,rr){c=c||C;rr=rr||r;return '<circle cx="'+c[0]+'" cy="'+c[1]+'" r="'+rr+'" fill="var(--bg)" stroke="'+T2+'" stroke-width="1.2"/>'};
+var nm=function(s,p,from,off){off=off||14;var u=unit(from,p);return txt(p[0]+u[0]*off,p[1]+u[1]*off,s,{w:500})};
+var CT=[
+    { t: 'Alternate segment theorem', a: '52°',
+      q: 'The angle between the tangent and chord AC is 52°. Find angle ABC.',
+      w: 'The angle between a tangent and a chord equals the angle in the alternate segment. So angle ABC = 52°.',
+      s: function (f) {
+        var A = P(C, r, 235), Cc = P(C, r, 339), B = P(C, r, 110);
+        var t1 = [A[0] + 55 * Math.cos(145 * D), A[1] - 55 * Math.sin(145 * D)];
+        var t2 = [A[0] + 55 * Math.cos(325 * D), A[1] - 55 * Math.sin(325 * D)];
+        return sv(circ() + ln(t1, t2) + ln(A, Cc) + ln(A, B) + ln(B, Cc) + wedge(A, t2, Cc, 24, '52°', 42) + wedge(B, A, Cc, 22, f ? '52°' : '?', 38, !f) + dots(A, B, Cc) + nm('A', A, C) + nm('B', B, C) + nm('C', Cc, C));
+      } },
+    { t: 'Angle at the centre theorem', a: '70°',
+      q: 'The angle at the circumference is 35°. Find the angle at the centre on the same arc.',
+      w: 'The angle at the centre is twice the angle at the circumference: 2 × 35° = 70°.',
+      s: function (f) {
+        var A = P(C, r, 55), B = P(C, r, 125), Dd = P(C, r, 270);
+        return sv(circ() + ln(C, A) + ln(C, B) + ln(Dd, A) + ln(Dd, B) + wedge(C, A, B, 20, f ? '70°' : '?', 36, !f) + wedge(Dd, A, B, 26, '35°', 50) + dots(A, B, Dd, C) + nm('A', A, C) + nm('B', B, C) + nm('D', Dd, C) + txt(C[0] + 13, C[1] + 10, 'O', { w: 500 }));
+      } },
+    { t: 'Angles in the same segment', a: '48°',
+      q: 'Angle ACB = 48°, and C and D are on the same side of chord AB. Find angle ADB.',
+      w: 'Angles in the same segment, standing on the same chord, are equal. So angle ADB = 48°.',
+      s: function (f) {
+        var A = P(C, r, 222), B = P(C, r, 318), Cc = P(C, r, 120), Dd = P(C, r, 50);
+        return sv(circ() + ln(A, B, true) + ln(Cc, A) + ln(Cc, B) + ln(Dd, A) + ln(Dd, B) + wedge(Cc, A, B, 24, '48°', 44) + wedge(Dd, A, B, 24, f ? '48°' : '?', 46, !f) + dots(A, B, Cc, Dd) + nm('A', A, C) + nm('B', B, C) + nm('C', Cc, C) + nm('D', Dd, C));
+      } },
+    { t: 'Angle in a semicircle', a: '52°',
+      q: 'AB is a diameter and angle CAB = 38°. Find angle ABC.',
+      w: 'Angle ACB = 90° (angle in a semicircle). Angles in a triangle add to 180°, so ABC = 180° − 90° − 38° = 52°.',
+      s: function (f) {
+        var A = P(C, r, 180), B = P(C, r, 0), Cc = P(C, r, 76);
+        return sv(circ() + ln(A, B) + ln(A, Cc) + ln(Cc, B) + (f ? ra(Cc, A, B, 9) : '') + wedge(A, B, Cc, 26, '38°', 46) + wedge(B, A, Cc, 24, f ? '52°' : '?', 40, !f) + dots(A, B, Cc, C) + nm('A', A, C) + nm('B', B, C) + nm('C', Cc, C));
+      } },
+    { t: 'Chord of a circle', a: '6 cm',
+      q: 'A circle has radius 10 cm and a chord of length 16 cm. How far is the chord from the centre?',
+      w: 'The perpendicular from the centre bisects the chord, so half the chord is 8 cm. Pythagoras: d² + 8² = 10², so d = 6 cm.',
+      s: function (f) {
+        var A = [152, 44], B = [152, 156], M = [152, 100];
+        return sv(circ() + ln(A, B) + ln(C, M) + ln(C, A) + ra(M, C, A, 8) + dots(A, B, M, C) + nm('A', A, C) + nm('B', B, C) +
+          txt(C[0] - 8, C[1] + 10, 'O', { w: 500 }) + txt(M[0] + 10, M[1] + 11, 'M', { w: 500 }) +
+          txt(126, 64, '10 cm', { a: 'end' }) +
+          txt(131, 118, f ? 'd = 6 cm' : 'd = ?', { w: 500, c: f ? T : ACC }) +
+          (f ? ln([152, 72], [200, 72], true) + txt(204, 72, '8 cm', { a: 'start' }) + ln([152, 128], [200, 128], true) + txt(204, 128, '8 cm', { a: 'start' })
+             : ln([152, 72], [200, 72], true) + txt(204, 72, '16 cm', { a: 'start' })));
+      } },
+    { t: 'Cyclic quadrilateral', a: '75°',
+      q: 'ABCD is a cyclic quadrilateral and angle A = 105°. Find the opposite angle C.',
+      w: 'Opposite angles in a cyclic quadrilateral add to 180°. So C = 180° − 105° = 75°.',
+      s: function (f) {
+        var A = P(C, r, 100), B = P(C, r, 170), Cc = P(C, r, 270), Dd = P(C, r, 20);
+        return sv(circ() + ln(A, B) + ln(B, Cc) + ln(Cc, Dd) + ln(Dd, A) + wedge(A, B, Dd, 24, '105°', 42) + wedge(Cc, B, Dd, 24, f ? '75°' : '?', 38, !f) + dots(A, B, Cc, Dd) + nm('A', A, C) + nm('B', B, C) + nm('C', Cc, C) + nm('D', Dd, C));
+      } },
+    { t: 'Tangent and radius', a: '60°',
+      q: 'A tangent from P touches the circle at A. O is the centre and angle APO = 30°. Find angle AOP.',
+      w: 'The tangent meets the radius at 90°, so angle OAP = 90°. Then AOP = 180° − 90° − 30° = 60°.',
+      s: function (f) {
+        var O = [85, 105], A = [112.5, 57.4], Pp = [195, 105], u = unit(Pp, A), te = [A[0] + 40 * u[0], A[1] + 40 * u[1]];
+        return sv(circ(O, 55) + ln(te, Pp) + ln(O, A) + ln(O, Pp, true) + (f ? ra(A, O, Pp, 9) : '') + wedge(O, A, Pp, 22, f ? '60°' : '?', 36, !f) + wedge(Pp, A, O, 30, '30°', 46) + dots(O, A, Pp) + txt(A[0] + 2, A[1] - 12, 'A', { w: 500 }) + txt(Pp[0] + 14, Pp[1] + 2, 'P', { w: 500 }) + txt(O[0] - 12, O[1] + 12, 'O', { w: 500 }));
+      } },
+    { t: 'Equal tangents', a: '9 cm',
+      q: 'Two tangents from P touch the circle at A and B. PA = 9 cm. Find PB.',
+      w: 'Tangents drawn from the same point are equal in length, so PB = PA = 9 cm.',
+      s: function (f) {
+        var O = [95, 100], Pp = [230, 100], A = [113.5, 53.5], B = [113.5, 146.5];
+        return sv(circ(O, 50) + ln(Pp, A) + ln(Pp, B) + ln(O, A) + ln(O, B) + ra(A, O, Pp, 8) + ra(B, O, Pp, 8) + (f ? tick(Pp, A) + tick(Pp, B) : '') + dots(O, A, B, Pp) +
+          txt(A[0], A[1] - 13, 'A', { w: 500 }) + txt(B[0], B[1] + 13, 'B', { w: 500 }) + txt(Pp[0] + 13, Pp[1], 'P', { w: 500 }) + txt(O[0] - 12, O[1] + 10, 'O', { w: 500 }) +
+          txt(180, 60, '9 cm') + txt(180, 140, f ? '9 cm' : '?', { c: f ? T : ACC, w: f ? 400 : 500 }));
+      } }
+  ];
+var CX=[
+    { t: 'Centre + cyclic quadrilateral', a: '110°',
+      q: 'O is the centre of the circle and angle AOB = 140°. Points C and D are on the circumference as shown. Find angle ADB.',
+      w: 'The angle at the centre is twice the angle at the circumference, so ACB = 140° ÷ 2 = 70°. Opposite angles in a cyclic quadrilateral add to 180°, so ADB = 180° − 70° = 110°.',
+      u: 'Theorems used: angle at the centre, cyclic quadrilateral',
+      s: function (f) {
+        var A = P(C, r, 200), B = P(C, r, 340), Cc = P(C, r, 90), Dd = P(C, r, 270);
+        return sv(circ() + ln(C, A) + ln(C, B) + ln(Cc, A) + ln(Cc, B) + ln(Dd, A) + ln(Dd, B) +
+          wedge(C, A, B, 24, '140°', 27) + wedge(Dd, A, B, 20, f ? '110°' : '?', 30, !f) + (f ? wedge(Cc, A, B, 24, '70°', 42) : '') +
+          dots(A, B, Cc, Dd, C) + nm('A', A, C) + nm('B', B, C) + nm('C', Cc, C) + nm('D', Dd, C) + txt(C[0] + 12, C[1] - 10, 'O', { w: 500 }));
+      } },
+    { t: 'Semicircle + cyclic quadrilateral', a: '124°',
+      q: 'AB is a diameter and ABCD is a cyclic quadrilateral. Angle CAB = 34°. Find angle ADC.',
+      w: 'Angle ACB = 90° (angle in a semicircle), so ABC = 180° − 90° − 34° = 56°. Opposite angles in a cyclic quadrilateral add to 180°, so ADC = 180° − 56° = 124°.',
+      u: 'Theorems used: angle in a semicircle, cyclic quadrilateral',
+      s: function (f) {
+        var A = P(C, r, 180), B = P(C, r, 0), Cc = P(C, r, 68), Dd = P(C, r, 130);
+        return sv(circ() + ln(A, B) + ln(B, Cc) + ln(Cc, Dd) + ln(Dd, A) + ln(A, Cc, true) +
+          wedge(A, B, Cc, 26, '34°', 48) + wedge(Dd, Cc, A, 18, f ? '124°' : '?', 22, !f) +
+          (f ? ra(Cc, A, B, 8) + wedge(B, A, Cc, 24, '56°', 40) : '') +
+          dots(A, B, Cc, Dd) + nm('A', A, C) + nm('B', B, C) + nm('C', Cc, C) + nm('D', Dd, C));
+      } },
+    { t: 'Alternate segment + semicircle', a: '28°',
+      q: 'AT is a tangent to the circle at A and AB is a diameter. Angle TAC = 62°. Find angle BAC.',
+      w: 'The angle between the tangent and chord AC equals the angle in the alternate segment, so ABC = 62°. Angle ACB = 90° (angle in a semicircle), so BAC = 180° − 90° − 62° = 28°.',
+      u: 'Theorems used: alternate segment, angle in a semicircle',
+      s: function (f) {
+        var A = P(C, r, 180), B = P(C, r, 0), Cc = P(C, r, 56), T1 = [40, 36], T2p = [40, 164];
+        return sv(circ() + ln(T1, T2p) + ln(A, B) + ln(A, Cc) + ln(Cc, B) +
+          wedge(A, T1, Cc, 26, '62°', 46) + wedge(A, Cc, B, 36, f ? '28°' : '?', 52, !f) +
+          (f ? ra(Cc, A, B, 8) + wedge(B, A, Cc, 24, '62°', 44) : '') +
+          dots(A, B, Cc) + txt(A[0] - 12, A[1] + 12, 'A', { w: 500 }) + nm('B', B, C) + nm('C', Cc, C) + txt(T1[0] - 2, T1[1] - 12, 'T', { w: 500 }));
+      } },
+    { t: 'Equal tangents + tangent and radius', a: '35°',
+      q: 'PA and PB are tangents to a circle with centre O. Angle APB = 70°. Find angle OAB.',
+      w: 'Tangents from the same point are equal, so PA = PB and triangle PAB is isosceles: PAB = (180° − 70°) ÷ 2 = 55°. A tangent meets the radius at 90°, so OAP = 90° and OAB = 90° − 55° = 35°.',
+      u: 'Theorems used: equal tangents, tangent and radius',
+      s: function (f) {
+        var O = [95, 105], A = [132.3, 51.8], B = [132.3, 158.2], Pp = [208, 105];
+        return sv(circ(O, 65) + ln(Pp, A) + ln(Pp, B) + ln(O, A) + ln(O, B) + ln(A, B) +
+          wedge(Pp, A, B, 26, '70°', 34) + wedge(A, O, B, 30, f ? '35°' : '?', 52, !f) +
+          (f ? wedge(A, Pp, B, 24, '55°', 44) + ra(A, O, Pp, 8) : '') +
+          dots(O, A, B, Pp) + txt(A[0] + 4, A[1] - 12, 'A', { w: 500 }) + txt(B[0] + 4, B[1] + 13, 'B', { w: 500 }) + txt(Pp[0] + 14, Pp[1], 'P', { w: 500 }) + txt(O[0] - 12, O[1] + 12, 'O', { w: 500 }));
+      } },
+    { t: 'Same segment + semicircle', a: '68°',
+      q: 'AC is a diameter of the circle. Angle CAD = 22°. Find angle ABD.',
+      w: 'Angles in the same segment are equal, so CBD = CAD = 22°. Angle ABC = 90° (angle in a semicircle), so ABD = 90° − 22° = 68°.',
+      u: 'Theorems used: angles in the same segment, angle in a semicircle',
+      s: function (f) {
+        var A = P(C, r, 180), Cc = P(C, r, 0), B = P(C, r, 110), Dd = P(C, r, 316);
+        return sv(circ() + ln(A, Cc) + ln(A, B) + ln(B, Cc) + ln(Cc, Dd) + ln(Dd, A) + ln(B, Dd) +
+          wedge(A, Cc, Dd, 30, '22°', 62) + wedge(B, A, Dd, 26, f ? '68°' : '?', 40, !f) +
+          (f ? ra(B, A, Cc, 7) + wedge(B, Cc, Dd, 40, '22°', 64) : '') +
+          dots(A, B, Cc, Dd) + nm('A', A, C) + nm('B', B, C) + nm('C', Cc, C) + nm('D', Dd, C));
+      } },
+    { t: 'Alternate segment + angle at the centre', a: '100°',
+      q: 'AT is a tangent to the circle at A and O is the centre. Angle TAB = 50°. Find angle AOB.',
+      w: 'The angle between the tangent and chord AB equals the angle in the alternate segment, so the angle at the circumference on chord AB is 50°. The angle at the centre is twice that, so AOB = 2 × 50° = 100°.',
+      u: 'Theorems used: alternate segment, angle at the centre',
+      s: function (f) {
+        var A = P(C, r, 235), B = P(C, r, 335), Cc = P(C, r, 110);
+        var t1 = [A[0] + 55 * Math.cos(145 * D), A[1] - 55 * Math.sin(145 * D)];
+        var t2 = [A[0] + 55 * Math.cos(325 * D), A[1] - 55 * Math.sin(325 * D)];
+        return sv(circ() + ln(t1, t2) + ln(A, B) + ln(C, A) + ln(C, B) + (f ? ln(Cc, A, true) + ln(Cc, B, true) : '') +
+          wedge(A, t2, B, 24, '50°', 42) + wedge(C, A, B, 22, f ? '100°' : '?', 28, !f) +
+          (f ? wedge(Cc, A, B, 24, '50°', 44) : '') +
+          dots(A, B, C) + nm('A', A, C) + nm('B', B, C) + (f ? nm('C', Cc, C) : '') + txt(C[0] + 12, C[1] - 10, 'O', { w: 500 }));
+      } },
+    { t: 'Same segment + cyclic quadrilateral', a: '105°',
+      q: 'ABCD is a cyclic quadrilateral. Angle ABD = 35° and angle CAD = 40°. Find angle ADC.',
+      w: 'Angles in the same segment are equal, so CBD = CAD = 40°. Then ABC = 35° + 40° = 75°. Opposite angles in a cyclic quadrilateral add to 180°, so ADC = 180° − 75° = 105°.',
+      u: 'Theorems used: angles in the same segment, cyclic quadrilateral',
+      s: function (f) {
+        var A = P(C, r, 100), B = P(C, r, 200), Cc = P(C, r, 310), Dd = P(C, r, 30);
+        return sv(circ() + ln(A, B) + ln(B, Cc) + ln(Cc, Dd) + ln(Dd, A) + ln(A, Cc) + ln(B, Dd) +
+          wedge(B, A, Dd, 30, '35°', 55) + wedge(A, Cc, Dd, 30, '40°', 50) +
+          (f ? wedge(B, Dd, Cc, 36, '40°', 70) : '') +
+          wedge(Dd, A, Cc, 20, f ? '105°' : '?', 0, !f, [151, 93]) +
+          dots(A, B, Cc, Dd) + nm('A', A, C) + nm('B', B, C) + nm('C', Cc, C) + nm('D', Dd, C));
+      } },
+    { t: 'Tangent and radius + Pythagoras', a: '12 cm',
+      q: 'PA is a tangent to a circle with centre O. The radius is 5 cm and OP = 13 cm. Find the length PA.',
+      w: 'A tangent meets the radius at 90°, so triangle OAP is right-angled at A. By Pythagoras, PA² = 13² − 5² = 169 − 25 = 144, so PA = 12 cm.',
+      u: 'Theorems used: tangent and radius, Pythagoras',
+      s: function (f) {
+        var O = [65, 105], A = [84.2, 58.8], Pp = [195, 105];
+        return sv(circ(O, 50) + ln(O, A) + ln(A, Pp) + ln(O, Pp) + (f ? ra(A, O, Pp, 8) : '') +
+          dots(O, A, Pp) + txt(A[0] - 4, A[1] - 12, 'A', { w: 500 }) + txt(Pp[0] + 14, Pp[1], 'P', { w: 500 }) + txt(O[0] - 10, O[1] + 12, 'O', { w: 500 }) +
+          txt(66, 72, '5 cm', { a: 'end' }) + txt(130, 122, '13 cm') +
+          txt(145, 69, f ? '12 cm' : '?', { w: f ? 400 : 500, c: f ? T : ACC }));
+      } }
+  ];
+var NC=[
+    /* ---------- Angles and straight lines ---------- */
+    { t: 'Angles and straight lines: angles on a straight line', a: 'x = 32',
+      q: 'Find the value of x. Give a reason for your answer.',
+      w: '4x + (x + 20) = 180, so 5x = 160 and x = 32. The angles are 128° and 52°.',
+      u: 'Reason: angles on a straight line add to 180°',
+      s: function (f) {
+        var O = [140, 140], E = [250, 140], R1 = at(O, 52, 85);
+        return sv(ln([30, 140], E) + ln(O, R1) +
+          wedge(O, E, R1, 28, f ? '52°' : '(x + 20)°', 0, false, [203, 121]) + wedge(O, R1, [30, 140], 28, f ? '128°' : '4x°', 0, false, [118, 100]) + dots(O));
+      } },
+    { t: 'Angles and straight lines: angles at a point', a: 'x = 55°',
+      q: 'Four angles meet at a point: 90°, 130°, 85° and x. Find x. Give a reason for your answer.',
+      w: '90° + 130° + 85° + x = 360°, so 305° + x = 360° and x = 55°.',
+      u: 'Reason: angles at a point add to 360°',
+      s: function (f) {
+        var O = [140, 105], rays = [10, 100, 230, 315].map(function (a) { return at(O, a, 80); }), labs = ['90°', '130°', '85°', f ? '55°' : 'x'];
+        var out = rays.map(function (e) { return ln(O, e); }).join('');
+        for (var k = 0; k < 4; k++) out += wedge(O, rays[k], rays[(k + 1) % 4], 24, labs[k], 44, k === 3 && !f);
+        return sv(out + dots(O));
+      } },
+    { t: 'Angles and straight lines: vertically opposite angles', a: 'x = 20',
+      q: 'Two straight lines cross. The angles are (3x + 10)° and (5x − 30)°. Find x. Give a reason for your answer.',
+      w: '3x + 10 = 5x − 30, so 40 = 2x and x = 20. Both angles are 70°.',
+      u: 'Reason: vertically opposite angles are equal',
+      s: function (f) {
+        var O = [140, 105], a = at(O, 15, 100), b = at(O, 195, 100), c = at(O, 85, 80), d = at(O, 265, 80);
+        return sv(ln(a, b) + ln(c, d) + wedge(O, a, c, 26, f ? '70°' : '(3x + 10)°', 0, false, f ? [176, 66] : [185, 51]) +
+          wedge(O, b, d, 26, f ? '70°' : '(5x − 30)°', 0, false, f ? [104, 144] : [95, 159]) + dots(O));
+      } },
+    /* ---------- Parallel lines ---------- */
+    { t: 'Parallel lines: corresponding angles', a: 'x = 70°',
+      q: 'The two lines are parallel. Find x. Give a reason for your answer.',
+      w: 'The angle at the top and the angle at the bottom are in matching positions (an F shape), so x = 70°.',
+      u: 'Reason: corresponding angles are equal',
+      s: function (f) {
+        var g = parallels(70, 110);
+        return sv(g.draw + ln(g.ta, g.tb) + wedge(g.P1, at(g.P1, 0, 50), g.tb, 24, '70°', 46) + wedge(g.P2, at(g.P2, 0, 50), g.tb, 24, f ? '70°' : 'x', 46, !f) + dots(g.P1, g.P2));
+      } },
+    { t: 'Parallel lines: alternate angles', a: 'x = 55°',
+      q: 'The two lines are parallel. Find x. Give a reason for your answer.',
+      w: 'The two angles are on opposite sides of the transversal and between the parallel lines (a Z shape), so x = 55°.',
+      u: 'Reason: alternate angles are equal',
+      s: function (f) {
+        var g = parallels(55, 100);
+        return sv(g.draw + ln(g.ta, g.tb) + wedge(g.P1, at(g.P1, 180, 50), at(g.P1, 235, 50), 24, '55°', 44) + wedge(g.P2, at(g.P2, 0, 50), at(g.P2, 55, 50), 24, f ? '55°' : 'x', 44, !f) + dots(g.P1, g.P2));
+      } },
+    { t: 'Parallel lines: co-interior (allied) angles', a: 'x = 70°',
+      q: 'The two lines are parallel. Find x. Give a reason for your answer.',
+      w: 'The two angles are between the parallel lines on the same side of the transversal (a C shape). x + 110° = 180°, so x = 70°.',
+      u: 'Reason: co-interior angles add to 180°',
+      s: function (f) {
+        var g = parallels(70, 110);
+        return sv(g.draw + ln(g.ta, g.tb) + wedge(g.P1, at(g.P1, 0, 50), at(g.P1, 250, 50), 22, '110°', 32) + wedge(g.P2, at(g.P2, 0, 50), at(g.P2, 70, 50), 20, f ? '70°' : 'x', 30, !f) + dots(g.P1, g.P2));
+      } },
+    /* ---------- Triangles ---------- */
+    { t: 'Triangles: angles in a triangle', a: 'x = 41',
+      q: 'The angles of a triangle are 47°, (2x)° and (x + 10)°. Find x. Give a reason for your answer.',
+      w: '47 + 2x + (x + 10) = 180, so 3x + 57 = 180, 3x = 123 and x = 41. The angles are 47°, 82° and 51°.',
+      u: 'Reason: angles in a triangle add to 180°',
+      s: function (f) {
+        var A = [80, 175], B = [200, 175], Cc = tri(A, B, 47, 82);
+        return sv(poly([A, B, Cc]) + wedge(A, B, Cc, 26, '47°', 46) + wedge(B, Cc, A, 24, f ? '82°' : '(2x)°', 36) + wedge(Cc, A, B, 26, f ? '51°' : '(x + 10)°', 0, false, [168, 127]) +
+          lab(A[0] - 10, A[1] + 12, 'A') + lab(B[0] + 10, B[1] + 12, 'B') + lab(Cc[0] + 10, Cc[1] - 8, 'C'));
+      } },
+    { t: 'Triangles: isosceles triangle', a: '70°',
+      q: 'Triangle ABC is isosceles with AB = AC. Angle BAC = 40°. Find angle ABC. Give a reason for your answer.',
+      w: 'The base angles are equal, so ABC = (180° − 40°) ÷ 2 = 70°.',
+      u: 'Reason: base angles of an isosceles triangle are equal',
+      s: function (f) {
+        var B = [95, 175], Cc = [185, 175], A = tri(B, Cc, 70, 70);
+        return sv(poly([A, B, Cc]) + tick(A, B) + tick(A, Cc) + wedge(A, B, Cc, 28, '40°', 54) + wedge(B, Cc, A, 24, f ? '70°' : 'x', 40, !f) + (f ? wedge(Cc, A, B, 24, '70°', 40) : '') +
+          lab(A[0], A[1] - 12, 'A') + lab(B[0] - 10, B[1] + 12, 'B') + lab(Cc[0] + 10, Cc[1] + 12, 'C'));
+      } },
+    { t: 'Triangles: exterior angle of a triangle', a: 'x = 113°',
+      q: 'BC is extended to D. Angle BAC = 48° and angle ABC = 65°. Find x, the angle ACD. Give a reason for your answer.',
+      w: 'The exterior angle equals the sum of the two opposite interior angles, so x = 48° + 65° = 113°.',
+      u: 'Reason: an exterior angle equals the sum of the two opposite interior angles',
+      s: function (f) {
+        var B = [40, 170], Cc = [170, 170], D2 = [250, 170], A = tri(B, Cc, 65, 67);
+        return sv(poly([A, B, Cc]) + ln(Cc, D2) + wedge(A, B, Cc, 26, '48°', 52) + wedge(B, Cc, A, 24, '65°', 42) + wedge(Cc, D2, A, 24, f ? '113°' : 'x', 40, !f) +
+          lab(A[0] - 2, A[1] - 12, 'A') + lab(B[0] - 10, B[1] + 12, 'B') + lab(Cc[0], Cc[1] + 14, 'C') + lab(D2[0] + 2, D2[1] + 14, 'D'));
+      } },
+    { t: 'Triangles: similar triangles', a: 'DF = 12 cm',
+      q: 'Triangles ABC and DEF are similar. AB = 6 cm, DE = 9 cm and AC = 8 cm. Find the length of DF.',
+      w: 'Corresponding sides are in the same proportion. Scale factor = 9 ÷ 6 = 1.5, so DF = 8 × 1.5 = 12 cm.',
+      u: 'Reason: in similar triangles, corresponding angles are equal and sides are in the same ratio',
+      s: function (f) {
+        var A = [22, 175], B = [102, 175], Cc = at(A, 60, 106), D2 = [142, 175], E = [262, 175], F2 = at(D2, 60, 159);
+        return sv(poly([A, B, Cc]) + poly([D2, E, F2]) +
+          arc(A, B, Cc, 16) + arc(D2, E, F2, 16) + arc(B, Cc, A, 14) + arc(B, Cc, A, 19) + arc(E, F2, D2, 14) + arc(E, F2, D2, 19) +
+          lab(12, 182, 'A') + lab(110, 182, 'B') + lab(75, 72, 'C') + lab(134, 182, 'D') + lab(270, 182, 'E') + lab(F2[0], F2[1] - 10, 'F') +
+          txt(62, 194, '6 cm') + txt(202, 194, '9 cm') + txt(40, 122, '8 cm', { a: 'end' }) +
+          txt(170, 100, f ? '12 cm' : '?', { a: 'end', w: f ? 400 : 500, c: f ? T : ACC }));
+      } },
+    /* ---------- Polygons ---------- */
+    { t: 'Polygons: interior angles', a: '135°',
+      q: 'Find the size of one interior angle (x) of a regular octagon.',
+      w: 'Sum of interior angles = (8 − 2) × 180° = 1080°. One angle = 1080° ÷ 8 = 135°.',
+      u: 'Rule: interior angles of an n-sided polygon add to (n − 2) × 180°',
+      s: function (f) {
+        var c = [140, 105], v = []; for (var k = 0; k < 8; k++) v.push(P(c, 78, 22.5 + 45 * k));
+        return sv(poly(v) + wedge(v[0], v[1], v[7], 22, f ? '135°' : 'x', 40, !f) + dots(v[0]));
+      } },
+    { t: 'Polygons: exterior angles', a: '9 sides',
+      q: 'Each exterior angle of a regular polygon is 40°. How many sides does the polygon have?',
+      w: 'Exterior angles of any polygon add to 360°. Number of sides = 360° ÷ 40° = 9.',
+      u: 'Rule: the exterior angles of any polygon add to 360°',
+      s: function (f) {
+        var c = [110, 100], v = []; for (var k = 0; k < 9; k++) v.push(P(c, 70, 90 + 40 * k));
+        var V0 = v[3], V1 = v[4], V2 = v[5], E = at(V1, 0, 42);
+        return sv(poly(v) + ln(V1, E) + wedge(V1, E, V2, 22, '40°', 30) + txt(c[0], c[1], f ? 'n = 9' : 'n = ?', { w: 500, c: f ? T : ACC }) + dots(V1));
+      } },
+    /* ---------- Right-angled triangles and trigonometry ---------- */
+    { t: 'Right-angled triangles: Pythagoras\' theorem', a: 'h = 6 m',
+      q: 'A 6.5 m ladder leans against a vertical wall. Its foot is 2.5 m from the wall. How high up the wall does the ladder reach?',
+      w: 'h² + 2.5² = 6.5², so h² = 42.25 − 6.25 = 36 and h = 6 m.',
+      u: 'Rule: Pythagoras\' theorem, a² + b² = c²',
+      s: function (f) {
+        var W = [210, 175], F = [165, 175], Tp = [210, 67];
+        return sv(ln([20, 175], [250, 175]) + ln(W, [210, 30]) + ln(F, Tp) + ra(W, F, Tp, 10) + dots(F, Tp, W) +
+          txt(168, 112, '6.5 m', { a: 'end' }) + txt(187, 192, '2.5 m') + txt(222, 121, f ? 'h = 6 m' : 'h', { a: 'start', w: f ? 400 : 500, c: f ? T : ACC }));
+      } },
+    { t: 'Trigonometry: sine ratio', a: 'x = 6.9 cm',
+      q: 'Find the length of x to 1 decimal place.',
+      w: 'sin 35° = opposite ÷ hypotenuse = x ÷ 12, so x = 12 × sin 35° = 6.9 cm.',
+      u: 'Rule: sin θ = opposite ÷ hypotenuse',
+      s: function (f) {
+        var A = [40, 170], Cc = at(A, 0, 144 * Math.cos(35 * D)), B = at(A, 35, 144);
+        Cc = [A[0] + 144 * Math.cos(35 * D), 170];
+        return sv(poly([A, Cc, B]) + ra(Cc, A, B, 10) + wedge(A, Cc, B, 28, '35°', 48) +
+          txt(88, 118, '12 cm', { a: 'end' }) + txt(172, 129, f ? 'x = 6.9 cm' : 'x', { a: 'start', w: f ? 400 : 500, c: f ? T : ACC }));
+      } },
+    { t: 'Trigonometry: cosine ratio', a: 'x = 4.9 cm',
+      q: 'Find the length of x to 1 decimal place.',
+      w: 'cos 52° = adjacent ÷ hypotenuse = x ÷ 8, so x = 8 × cos 52° = 4.9 cm.',
+      u: 'Rule: cos θ = adjacent ÷ hypotenuse',
+      s: function (f) {
+        var A = [40, 170], Cc = [40 + 144 * Math.cos(52 * D), 170], B = at(A, 52, 144);
+        return sv(poly([A, Cc, B]) + ra(Cc, A, B, 10) + wedge(A, Cc, B, 28, '52°', 46) +
+          txt(76, 106, '8 cm', { a: 'end' }) + txt(84, 191, f ? 'x = 4.9 cm' : 'x', { w: f ? 400 : 500, c: f ? T : ACC }));
+      } },
+    { t: 'Trigonometry: tangent ratio', a: 'θ = 54.5°',
+      q: 'Find the size of angle θ to 1 decimal place.',
+      w: 'tan θ = opposite ÷ adjacent = 7 ÷ 5 = 1.4, so θ = tan⁻¹(1.4) = 54.5°.',
+      u: 'Rule: tan θ = opposite ÷ adjacent',
+      s: function (f) {
+        var A = [80, 175], Cc = [150, 175], B = [150, 77];
+        return sv(poly([A, Cc, B]) + ra(Cc, A, B, 10) + wedge(A, Cc, B, 28, f ? '54.5°' : 'θ', 0, !f, [124, 156]) +
+          txt(115, 192, '5 m') + txt(162, 126, '7 m', { a: 'start' }));
+      } },
+    { t: 'Bearings', a: '245°',
+      q: 'A boat sails 8 km from A on a bearing of 065° to B. What is the bearing of A from B?',
+      w: 'The north lines are parallel, so the angle between BA and the south line is 65° (alternate angles). The bearing of A from B is 180° + 65° = 245°.',
+      u: 'Rule: bearings are measured clockwise from north, using three digits',
+      s: function (f) {
+        var A = [110, 150], B = [110 + 90 * Math.sin(65 * D), 150 - 90 * Math.cos(65 * D)];
+        return sv(ln(A, B) + north(A) + north(B) + barc(A, 65, 26) + barc(B, 245, 24) + dots(A, B) +
+          txt(133, 113, '065°', { w: 500 }) + txt(225, 134, f ? '245°' : '?', { w: 500, c: f ? T : ACC }) +
+          (f ? ln(B, [B[0], B[1] + 50], true) + wedge(B, [B[0], B[1] + 50], A, 18, '65°', 0, false, [172, 142]) : '') +
+          txt(143, 118, '8 km', { a: 'end' }) + lab(A[0] - 12, A[1] + 12, 'A') + lab(B[0] + 12, B[1] - 8, 'B'));
+      } }
+  ];
+window.DK={ct:{n:'Circle theorems',e:'⭕',col:'#ea7a1a',c:CT},cx:{n:'Circle theorems: exam style',e:'🎯',col:'#e11d48',c:CX},nc:{n:'NCEA geometry',e:'📐',col:'#2563eb',c:NC}};
+})();
+</script>
+<script>
+const $=s=>document.querySelector(s),E=s=>(''+s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+let S={p:{},nt:{},fk:{}};try{S=Object.assign(S,JSON.parse(localStorage.getItem('y11m')||'{}'))}catch(e){}
+const save=()=>{try{localStorage.setItem('y11m',JSON.stringify(S))}catch(e){}};
+const R=(a,b)=>a+Math.floor(Math.random()*(b-a+1)),NZ=(a,b)=>{let n=0;while(!n)n=R(a,b);return n},pick=a=>a[R(0,a.length-1)],sh=a=>a.sort(()=>Math.random()-.5),gcd=(a,b)=>b?gcd(b,a%b):a;
+const N=n=>n<0?'−'+-n:''+n,sg=n=>n<0?'− '+-n:'+ '+n;
+const P=(...t)=>{let s='';t.forEach(([c,v])=>{if(!c)return;let a=Math.abs(c),k=a==1&&v?'':a;s+=(s?c<0?' − ':' + ':c<0?'−':'')+k+v});return s||'0'};
+const sup=n=>(''+n).replace(/\d/g,d=>'⁰¹²³⁴⁵⁶⁷⁸⁹'[d]),xp=n=>n==1?'x':n==0?'1':'x'+sup(n),L=(a,b,v='x')=>P([a,v],[b,'']),F=(a,b,c,d)=>'('+L(a,b)+')('+L(c,d)+')',fl={'>':'<','<':'>','≥':'≤','≤':'≥'};
+const T=[
+['Collecting like terms',0,()=>{let a=R(2,9),b=NZ(-7,7),c=NZ(-6,6),d=NZ(-7,7);return['Simplify  '+P([a,'x'],[b,'y'],[c,'x'],[d,'y']),P([a+c,'x'],[b+d,'y']),[P([a+c,'x'],[b-d,'y']),P([a-c,'x'],[b+d,'y']),N(a+b+c+d)+'xy'],['Group the x terms: '+P([a,'x'],[c,'x'])+' = '+P([a+c,'x']),'Group the y terms: '+P([b,'y'],[d,'y'])+' = '+P([b+d,'y']),'Put them together, keeping each sign.']]},'Collecting like terms','Only add/subtract terms with the SAME letter and power.\n3x + 2y − x = 2x + 2y'],
+['Expanding single brackets',0,()=>{let k=R(2,9)*pick([1,1,-1]),n=NZ(-9,9),K=k<0?'−'+-k:k;return['Expand  '+K+'(x '+sg(n)+')',P([k,'x'],[k*n,'']),[P([k,'x'],[n,'']),P([k,'x'],[-k*n,'']),P([k,'x²'],[k*n,''])],['Multiply the number outside by EVERY term inside.',K+' × x = '+P([k,'x']),K+' × ('+N(n)+') = '+N(k*n)]]},'Expand 3(x + 4)','Multiply everything inside by the number outside: 3x + 12.\nNegatives: −2(x − 5) = −2x + 10'],
+['Expanding double brackets',0,()=>{let p=NZ(-8,8),q=NZ(-8,8);return['Expand and simplify  (x '+sg(p)+')(x '+sg(q)+')',P([1,'x²'],[p+q,'x'],[p*q,'']),[P([1,'x²'],[p+q,'x'],[-p*q,'']),P([1,'x²'],[p*q,'x'],[p+q,'']),P([1,'x²'],[p*q,''])],['Every term in bracket 1 × every term in bracket 2 (FOIL).','= '+P([1,'x²'],[q,'x'],[p,'x'],[p*q,'']),'Collect the x terms: '+P([1,'x²'],[p+q,'x'],[p*q,''])]]},'Expand (x + 3)(x − 5)','Every term × every term:\nx² − 5x + 3x − 15 = x² − 2x − 15'],
+['Expanding squares',0,()=>{let n=NZ(-9,9);return['Expand  (x '+sg(n)+')²',P([1,'x²'],[2*n,'x'],[n*n,'']),[P([1,'x²'],[n*n,'']),P([1,'x²'],[n,'x'],[n*n,'']),P([1,'x²'],[2*n,'x'],[-n*n,''])],['(x '+sg(n)+')² means (x '+sg(n)+')(x '+sg(n)+') — NOT x² + '+n*n+'!','Square the first: x². Double the product: 2 × x × '+N(n)+' = '+P([2*n,'x']),'Square the last: ('+N(n)+')² = '+n*n]]},'Expand (x + 4)²','(x + 4)(x + 4) = x² + 8x + 16\nNOT x² + 16!'],
+['Index laws',0,()=>{let t=R(0,4),a=R(2,7),b=R(2,5),k=R(2,9),n=R(1,3),m=pick([2,3,4,5]);return[
+['Simplify  x'+sup(a)+' × x'+sup(b),xp(a+b),[xp(a*b),xp(Math.abs(a-b)),'2'+xp(a+b)],['Same base multiplied → ADD the powers.',a+' + '+b+' = '+(a+b)]],
+['Simplify  x'+sup(a+b)+' ÷ x'+sup(b),xp(a),[xp(a+2*b),xp(a*b),xp(b)],['Same base divided → SUBTRACT the powers.',(a+b)+' − '+b+' = '+a]],
+['Simplify  (x'+sup(a)+')'+sup(b),xp(a*b),[xp(a+b),xp(a*b+a),xp(a*b-b)],['Power of a power → MULTIPLY the powers.',a+' × '+b+' = '+a*b]],
+['What is the value of  '+k+'x⁰  (x ≠ 0)?',k,[0,1,-k],['Anything (except 0) to the power 0 equals 1.','So '+k+'x⁰ = '+k+' × 1 = '+k]],
+['Evaluate  '+m+'⁻'+sup(n),'1/'+m**n,['−'+m**n,'−1/'+m**n,'1/'+m*n],['A negative power means "one over": '+m+'⁻'+sup(n)+' = 1/'+m+sup(n),m+sup(n)+' = '+m**n+', so the answer is 1/'+m**n]]][t]},'Index laws','Multiply: ADD powers · Divide: SUBTRACT · Power of power: MULTIPLY\nx⁰ = 1   x⁻ⁿ = 1/xⁿ'],
+['Taking out common factors',0,()=>{let g=R(2,6),a,b;do{a=R(1,5);b=NZ(-6,6)}while(gcd(a,Math.abs(b))>1);return['Factorise fully  '+P([g*a,'x²'],[g*b,'x']),g+'x('+L(a,b)+')',[g+'('+P([a,'x²'],[b,'x'])+')',g+'x('+L(a,-b)+')','x('+L(g*a,g*b)+')'],['HCF of the numbers '+g*a+' and '+Math.abs(g*b)+' is '+g,'Both terms have x, so the HCF is '+g+'x','Divide each term by '+g+'x → '+P([a,'x'])+' and '+N(b),'Answer: '+g+'x('+L(a,b)+')']]},'Common factor','Take out the HCF of numbers AND letters.\n6x² + 9x = 3x(2x + 3)'],
+['Factorising x² + bx + c',0,()=>{let p,q;do{p=NZ(-9,9);q=NZ(-9,9)}while(p==q||p+q==0);return['Factorise  '+P([1,'x²'],[p+q,'x'],[p*q,'']),'(x '+sg(p)+')(x '+sg(q)+')',['(x '+sg(-p)+')(x '+sg(-q)+')','(x '+sg(p)+')(x '+sg(-q)+')','(x '+sg(-p)+')(x '+sg(q)+')'],['Find two numbers that MULTIPLY to '+N(p*q)+' and ADD to '+N(p+q),'They are '+N(p)+' and '+N(q)+':  '+N(p)+' × '+N(q)+' = '+N(p*q)+',  '+N(p)+' + '+N(q)+' = '+N(p+q),'Put them in brackets (expand to check!)']]},'Factorise x² + 5x + 6','Find two numbers that MULTIPLY to c and ADD to b.\n(x + 2)(x + 3)'],
+['Factorising ax² + bx + c',0,()=>{let m,n,p,q;do{m=R(2,4);n=R(1,3);p=NZ(-6,6);q=NZ(-6,6)}while(m==n||p==q);return['Factorise  '+P([m*n,'x²'],[m*q+n*p,'x'],[p*q,'']),F(m,p,n,q),[F(m,-p,n,-q),F(m,q,n,p),F(m,p,n,-q)],['Multiply a × c: '+m*n+' × '+N(p*q)+' = '+N(m*n*p*q),'Find two numbers that multiply to '+N(m*n*p*q)+' and add to '+N(m*q+n*p)+': '+N(m*q)+' and '+N(n*p),'Split the middle: '+P([m*n,'x²'],[m*q,'x'],[n*p,'x'],[p*q,'']),'Factorise in pairs: '+m+'x('+L(n,q)+') '+sg(p)+'('+L(n,q)+')','Take out the common bracket: '+F(m,p,n,q)]]},'Factorise 2x² + 7x + 3','Multiply a×c, find the pair that adds to b, split the middle, factorise in pairs.\n(2x + 1)(x + 3)'],
+['Difference of two squares',0,()=>{let a=R(1,5),b=R(2,12);return['Factorise  '+P([a*a,'x²'],[-b*b,'']),F(a,b,a,-b),['('+L(a,-b)+')²','('+L(a,b)+')²',F(a*a,b*b,a*a,-b*b)],['Spot it: (something)² − (something)².',P([a*a,'x²'])+' = ('+P([a,'x'])+')²  and  '+b*b+' = '+b+'²','Rule: A² − B² = (A + B)(A − B)']]},'Difference of two squares','a² − b² = (a + b)(a − b)\nx² − 49 = (x + 7)(x − 7)'],
+['Factorising by grouping',0,()=>{let a,b;do{a=NZ(-6,6);b=NZ(-6,6)}while(a==b);return['Factorise by grouping  '+P([1,'xy'],[a,'x'],[b,'y'],[a*b,'']),'(x '+sg(b)+')(y '+sg(a)+')',['(x '+sg(a)+')(y '+sg(b)+')','(x '+sg(-b)+')(y '+sg(-a)+')','(x '+sg(b)+')(y '+sg(-a)+')'],['Split into pairs: ('+P([1,'xy'],[a,'x'])+') + ('+P([b,'y'],[a*b,''])+')','Factorise each pair: x(y '+sg(a)+') '+sg(b)+'(y '+sg(a)+')','The bracket (y '+sg(a)+') is common — take it out.']]},'Factorise xy + 3x + 2y + 6','Pair up, factorise each pair, take out the common bracket.\nx(y + 3) + 2(y + 3) = (x + 2)(y + 3)'],
+['Algebraic fractions',0,()=>{let p,q;do{p=NZ(-6,6);q=NZ(-6,6)}while(p==q);return['Simplify  ('+P([1,'x²'],[p+q,'x'],[p*q,''])+') / (x '+sg(p)+')','x '+sg(q),['x '+sg(-q),'x '+sg(p),'x '+sg(p*q)],['Factorise the top: '+F(1,p,1,q),'Write it as ('+L(1,p)+')('+L(1,q)+') / ('+L(1,p)+')','Cancel the common bracket (never cancel single terms!)']]},'Algebraic fractions','Factorise top and bottom, then cancel COMMON BRACKETS only.\n(x²+5x+6)/(x+2) = x + 3'],
+['Solving linear equations',0,()=>{let s=R(-8,8);if(R(0,1)){let a=R(3,8),c=R(1,a-1),b=NZ(-9,9),d=b+(a-c)*s;return['Solve  '+L(a,b)+' = '+L(c,d),'x = '+N(s),['x = '+N(-s),'x = '+N(s+1),'x = '+N(s-1),'x = '+N(s+2)],['Subtract '+c+'x from both sides: '+L(a-c,b)+' = '+N(d),'Move the number across: '+P([a-c,'x'])+' = '+N(d-b),'Divide both sides by '+(a-c)]]}let k=R(2,6),n=NZ(-6,6),m=k*(s+n);return['Solve  '+k+'(x '+sg(n)+') = '+N(m),'x = '+N(s),['x = '+N(-s),'x = '+N(s+1),'x = '+N(s-1),'x = '+N(s+2)],['Expand the bracket: '+P([k,'x'],[k*n,''])+' = '+N(m),'Move the number across: '+P([k,'x'])+' = '+N(m-k*n),'Divide both sides by '+k]]},'Solving equations','Do the same to BOTH sides. x terms one side, numbers the other, then divide.'],
+['Inequalities',0,()=>{let a=NZ(-6,6),b=NZ(-9,9),s=NZ(-6,6),o=pick(['>','<','≥','≤']),c=a*s+b,o2=a<0?fl[o]:o;return['Solve  '+L(a,b)+' '+o+' '+N(c),'x '+o2+' '+N(s),['x '+fl[o2]+' '+N(s),'x '+o2+' '+N(-s),'x '+fl[o2]+' '+N(-s)],['Move the number across: '+P([a,'x'])+' '+o+' '+N(c-b),'Divide both sides by '+N(a)+(a<0?' — dividing by a NEGATIVE flips the sign!':''),'On a number line: open circle for < and >, filled circle for ≤ and ≥.']]},'Inequalities','Solve like an equation, BUT flip the sign when multiplying/dividing by a negative.'],
+['Quadratics by factorising',0,()=>{let p,q;do{p=NZ(-9,9);q=NZ(-9,9)}while(p==q||p+q==0);let f=(x,y)=>'x = '+N(Math.min(x,y))+' or x = '+N(Math.max(x,y));return['Solve  '+P([1,'x²'],[p+q,'x'],[p*q,''])+' = 0',f(-p,-q),[f(p,q),f(p,-q),f(-p,q)],['Factorise: '+F(1,p,1,q)+' = 0','If two things multiply to 0, one of them is 0: x '+sg(p)+' = 0 or x '+sg(q)+' = 0','Solve each bracket.']]},'Solve x² + 5x + 6 = 0','Get = 0, factorise, set each bracket = 0.\nx = −2 or x = −3'],
+['Simultaneous equations',0,()=>{let X=R(-5,7),Y=R(-5,7),a,b,c,d;do{a=NZ(-4,4);b=NZ(-4,4);c=NZ(-4,4);d=NZ(-4,4)}while(a*d-b*c==0);let e1=a*X+b*Y,e2=c*X+d*Y,f=(x,y)=>'x = '+N(x)+', y = '+N(y);return['Solve:   '+P([a,'x'],[b,'y'])+' = '+N(e1)+'    and    '+P([c,'x'],[d,'y'])+' = '+N(e2),f(X,Y),[f(Y,X),f(-X,Y),f(X,-Y),f(X+1,Y)],['Match the y-coefficients: (1) × '+N(d)+' and (2) × '+N(b),'(1)×'+N(d)+':  '+P([a*d,'x'],[b*d,'y'])+' = '+N(e1*d),'(2)×'+N(b)+':  '+P([c*b,'x'],[b*d,'y'])+' = '+N(e2*b),'Subtract to eliminate y: '+P([a*d-b*c,'x'])+' = '+N(e1*d-e2*b)+' → x = '+N(X),'Put x = '+N(X)+' into equation (1) to get y = '+N(Y)+'. Check in (2).']]},'Simultaneous equations','Match one letter, add/subtract to eliminate it, solve, substitute back, then CHECK.'],
+['Changing the subject',0,()=>{let a=R(2,6),b=NZ(-9,9);return['Make x the subject:  y = '+L(a,b),'x = (y '+sg(-b)+') / '+a,['x = (y '+sg(b)+') / '+a,'x = y '+sg(-b)+' / '+a,'x = '+a+'(y '+sg(-b)+')'],['Undo in reverse order. First '+(b>0?'subtract ':'add ')+Math.abs(b)+' on both sides: y '+sg(-b)+' = '+P([a,'x']),'Then divide both sides by '+a]]},'Rearrange y = mx + c for x','Undo the operations in reverse order, same on both sides.\nx = (y − c) / m'],
+['Substitution',0,()=>{let a=R(1,4),b=NZ(-6,6),c=NZ(-9,9),n=NZ(-5,5),v=a*n*n+b*n+c;return['Find the value of  '+P([a,'x²'],[b,'x'],[c,''])+'  when x = '+N(n),v,[-a*n*n+b*n+c,(a*n)**2+b*n+c,a*n*n-b*n+c],['Replace every x with ('+N(n)+'): '+a+'('+N(n)+')² + ('+N(b)+')('+N(n)+') + ('+N(c)+')','Square FIRST: ('+N(n)+')² = '+n*n+' (a negative squared is positive)',N(a*n*n)+' + ('+N(b*n)+') + ('+N(c)+') = '+N(v)]]},'Substitution tips','Put the number in brackets. Square BEFORE multiplying:\n3(−2)² = 3 × 4 = 12'],
+['Gradient & equation of a line',0,()=>{let m=NZ(-4,4),x1=R(-3,3),y1=R(-5,5),dx=R(1,4),x2=x1+dx,y2=y1+m*dx,c=y1-m*x1,pt='('+N(x1)+', '+N(y1)+') and ('+N(x2)+', '+N(y2)+')';return R(0,1)?['Find the gradient of the line through '+pt,m,[-m,m+1,m-1,2*m],['Gradient = change in y ÷ change in x','= ('+N(y2)+' − ('+N(y1)+')) ÷ ('+N(x2)+' − ('+N(x1)+'))','= '+N(y2-y1)+' ÷ '+N(dx)+' = '+N(m)]]:['Find the equation of the line through '+pt,'y = '+P([m,'x'],[c,'']),['y = '+P([-m,'x'],[c,'']),'y = '+P([m,'x'],[-c,'']),'y = '+P([m,'x'],[y1,'']),'y = '+P([c,'x'],[m,''])],['Gradient m = '+N(y2-y1)+' ÷ '+N(dx)+' = '+N(m),'Use y = mx + c with a point: '+N(y1)+' = '+N(m)+'×('+N(x1)+') + c','So c = '+N(c)]]},'Straight lines: y = mx + c','m = gradient = change in y ÷ change in x\nc = where the line crosses the y-axis'],
+['Linear nth term',1,()=>{let a=NZ(-6,8),b=NZ(-9,9),t=[1,2,3,4].map(n=>a*n+b);return['Find the nth term:   '+t.map(N).join(', ')+', …',P([a,'n'],[b,'']),[P([a,'n'],[-b,'']),P([a,'n'],[t[0],'']),P([b,'n'],[a,'']),P([-a,'n'],[b,''])],['Common difference = '+N(a)+' → the rule starts with '+P([a,'n']),'n = 1 gives '+N(a)+' but the first term is '+N(t[0])+' → adjust by '+N(b),'Rule: '+P([a,'n'],[b,''])+'. Check n = 2: '+N(t[1])+' ✓']]},'Linear nth term','nth term = dn + (first term − d), d = common difference.\n5, 8, 11, 14 → 3n + 2'],
+['Quadratic nth term',1,()=>{let a=R(1,4),b=NZ(-5,6),c=NZ(-6,6),t=[1,2,3,4].map(n=>a*n*n+b*n+c),d=[1,2,3].map(i=>t[i]-t[i-1]);return['Find the nth term:   '+t.map(N).join(', ')+', …',P([a,'n²'],[b,'n'],[c,'']),[P([2*a,'n²'],[b,'n'],[c,'']),P([a,'n²'],[-b,'n'],[c,'']),P([a,'n²'],[b,'n'],[-c,'']),P([a,'n²'],[c,'n'],[b,''])],['First differences: '+d.map(N).join(', '),'Second differences: '+N(d[1]-d[0])+', '+N(d[2]-d[1])+' (constant → quadratic)','a = second difference ÷ 2 = '+a,'Subtract '+a+'n² from each term: '+t.map((v,i)=>N(v-a*(i+1)**2)).join(', ')+' → linear rule '+L(b,c,'n')]]},'Quadratic nth term','Second difference ÷ 2 = a. Subtract an² from the terms, then find the linear nth term of what is left.'],
+['Using the nth term',1,()=>{let a=R(2,9),b=NZ(-8,9),k=R(20,60),n=R(10,40),v=a*n+b;return R(0,1)?['The nth term is '+P([a,'n'],[b,''])+'. Find the '+k+'th term.',a*k+b,[a*k,a*k-b,(a+b)*k],['Put n = '+k+' into the rule','= '+a+' × '+k+' '+sg(b),'= '+N(a*k+b)]]:['The nth term is '+P([a,'n'],[b,''])+'. Which term number equals '+N(v)+'?',n,[n+1,n-1,v-b,Math.round(v/a)],['Set the rule equal to '+N(v)+': '+L(a,b,'n')+' = '+N(v),'Move the number across: '+a+'n = '+N(v-b),'Divide by '+a+': n = '+n]]},'Using the nth term','Sub n in to find a term.\nTo find WHICH term = a value: set rule = value and solve for n.'],
+['Special sequences',1,()=>{let t=R(0,4),k=R(1,7),x=R(1,5),y=R(2,6),r=R(2,3),s,m;if(t==0){s=[0,1,2,3,4].map(i=>(k+i)**2);m='square numbers: the next is '+(k+4)+'² = '+s[4]}else if(t==1){s=[0,1,2,3,4].map(i=>(k+i)*(k+i+1)/2);m='triangular numbers: the gaps grow by 1 each time'}else if(t==2){s=[0,1,2,3,4].map(i=>(k+i)**3);m='cube numbers: the next is '+(k+4)+'³ = '+s[4]}else if(t==3){s=[x,y];for(let i=2;i<5;i++)s.push(s[i-1]+s[i-2]);m='a Fibonacci-type sequence: add the previous TWO terms'}else{s=[0,1,2,3,4].map(i=>x*r**i);m='a multiplying pattern: ×'+r+' each time'}let d=[1,2,3].map(i=>s[i]-s[i-1]);return['What is the next term?   '+s.slice(0,4).join(', ')+', …',s[4],[s[3]+d[2],s[3]*2,s[4]+1,s[4]-1],['Look at the gaps: '+d.join(', '),'This is '+m,'Next term = '+s[4]]]},'Special sequences','Squares 1,4,9,16 · Triangular 1,3,6,10 · Cubes 1,8,27,64 · Fibonacci: add the previous two.'],
+['Angle facts',2,()=>{let A=R(25,70),B=R(25,80),C=R(20,60),D=[['Angles on a straight line are ',180,[A,B],'Angles on a straight line add to 180°'],['Angles around a point are ',360,[A,B,C],'Angles around a point add to 360°'],['The angles in a triangle are ',180,[A,B],'Angles in a triangle add to 180°'],['The angles in a quadrilateral are ',360,[A,B,C],'Angles in a quadrilateral add to 360°']][R(0,3)],l=D[2],sm=l.reduce((p,c)=>p+c),a=D[1]-sm;return[D[0]+l.join('°, ')+'° and x. Find x.',a,[sm,(D[1]==180?360:180)-sm,a+10,a-10],[D[3]+' ('+D[1]+'°)','x = '+D[1]+'° − ('+l.join('° + ')+'°) = '+D[1]+'° − '+sm+'°'],'°']},'Angle facts','Straight line 180° · Point 360° · Triangle 180° · Quadrilateral 360° · Vertically opposite: equal'],
+['Parallel lines',2,()=>{let A=pick([40,50,55,65,70,110,120,130,125,115]),t=R(0,2),nm=['alternate','corresponding','co-interior'][t],a=t==2?180-A:A;return['Two parallel lines are crossed by a transversal. One angle is '+A+'°. The angle x is '+['an alternate','a corresponding','a co-interior'][t]+' angle to it. Find x.',a,[t==2?A:180-A,360-A,90-A],['Parallel lines: '+['alternate angles are EQUAL (Z shape)','corresponding angles are EQUAL (F shape)','co-interior angles ADD to 180° (C shape)'][t],t==2?'x = 180° − '+A+'° = '+a+'°':'x = '+A+'°','Exam reason: "'+nm+' angles, parallel lines"'],'°']},'Parallel line angles','Alternate (Z): equal · Corresponding (F): equal · Co-interior (C): add to 180°'],
+['Polygons',2,()=>{let t=R(0,3),n=pick([5,6,8,9,10,12]),e=pick([30,36,40,45,60,72,90]),sm=(n-2)*180,r;if(t==0)r=['What is the sum of the interior angles of a polygon with '+n+' sides?',sm,[n*180,(n-1)*180,(n+2)*180],['Sum of interior angles = (n − 2) × 180°','= ('+n+' − 2) × 180° = '+sm+'°']];else if(t==1)r=['Find ONE interior angle of a regular polygon with '+n+' sides.',sm/n,[360/n,sm,(n-1)*180/n],['Sum of interior angles = ('+n+' − 2) × 180° = '+sm+'°','All angles are equal: '+sm+' ÷ '+n+' = '+sm/n+'°','Shortcut: interior = 180° − exterior = 180° − '+360/n+'°']];else if(t==2)r=['Find ONE exterior angle of a regular polygon with '+n+' sides.',360/n,[sm/n,180/n,Math.round(360/(n+1))],['Exterior angles of any polygon add to 360°','360° ÷ '+n+' = '+360/n+'°']];else r=['Each exterior angle of a regular polygon is '+e+'°. How many sides does it have?',360/e,[360/e+1,360/e-1,360/e+2,e],['Exterior angles of any polygon add to 360°','Number of sides = 360° ÷ '+e+'° = '+360/e]];if(t<3)r[4]='°';return r},'Polygon angles','Interior sum = (n − 2) × 180°\nExterior angles sum to 360°; regular: 360 ÷ n'],
+['Circle theorems',2,()=>{let A=R(20,80),B=A+50,r=[['The angle at the circumference is '+A+'°. What is the angle at the centre on the same arc?',2*A,[A/2,180-A,90-A],['Angle at the centre is TWICE the angle at the circumference','2 × '+A+'° = '+2*A+'°']],['The angle at the centre is '+2*A+'°. What is the angle at the circumference on the same arc?',A,[4*A,180-2*A,360-2*A],['Angle at the circumference is HALF the angle at the centre','Half of '+2*A+'° = '+A+'°']],['AB is a diameter and C is on the circle. Angle CAB = '+A+'°. Find angle ABC.',90-A,[180-A,90+A,A],['Angle in a semicircle = 90°, so angle ACB = 90°','Triangle ABC adds to 180°','ABC = 180° − 90° − '+A+'° = '+(90-A)+'°']],['ABCD is a cyclic quadrilateral. Angle ABC = '+B+'°. Find the opposite angle ADC.',180-B,[B,360-B,B-30],['Opposite angles of a cyclic quadrilateral add to 180°','ADC = 180° − '+B+'° = '+(180-B)+'°']]][R(0,3)];r[4]='°';return r},'Circle theorems','Centre = 2 × circumference · Semicircle = 90° · Cyclic quad: opposite angles = 180° · Tangent ⟂ radius'],
+['Pythagoras',2,()=>{let k=pick([1,1,2]),[a,b,c]=pick([[3,4,5],[5,12,13],[8,15,17],[7,24,25],[6,8,10],[9,12,15],[20,21,29]]).map(v=>v*k);return R(0,1)?['A right-angled triangle has shorter sides '+a+' cm and '+b+' cm. Find the hypotenuse.',c,[a+b,a*a+b*b,b-a,c+2],['Pythagoras: a² + b² = c² (c = hypotenuse, opposite the right angle)',a+'² + '+b+'² = '+a*a+' + '+b*b+' = '+(a*a+b*b),'c = √'+(a*a+b*b)+' = '+c+' cm'],' cm']:['A right-angled triangle has hypotenuse '+c+' cm and one shorter side '+a+' cm. Find the other shorter side.',b,[c-a,c+a,c*c-a*a,a+2],['The hypotenuse is the longest side: b² = c² − a²','b² = '+c*c+' − '+a*a+' = '+(c*c-a*a),'b = √'+(c*c-a*a)+' = '+b+' cm'],' cm']},'Pythagoras','a² + b² = c² (c = hypotenuse)\nTriples: 3-4-5, 5-12-13, 8-15-17, 7-24-25'],
+['Trigonometry',2,()=>{let th=pick([25,30,35,40,50,55,60,65]),rd=th*Math.PI/180,H=R(8,20),r=v=>+v.toFixed(1),o=R(4,9),h=o+R(2,8),ag=r(Math.asin(o/h)*180/Math.PI);return[['A right-angled triangle has hypotenuse '+H+' cm and an angle of '+th+'°. Find the side OPPOSITE the angle.',r(H*Math.sin(rd)),[r(H*Math.cos(rd)),r(H/Math.sin(rd)),r(H*Math.tan(rd))],['SOH CAH TOA — we know H and want O, so use SINE: sin θ = O ÷ H','O = '+H+' × sin('+th+'°)','O = '+r(H*Math.sin(rd))+' cm (calculator is in degrees)'],' cm'],['A right-angled triangle has hypotenuse '+H+' cm and an angle of '+th+'°. Find the side ADJACENT to the angle.',r(H*Math.cos(rd)),[r(H*Math.sin(rd)),r(H/Math.cos(rd)),r(H*Math.tan(rd))],['We know H and want A, so use COSINE: cos θ = A ÷ H','A = '+H+' × cos('+th+'°)','A = '+r(H*Math.cos(rd))+' cm'],' cm'],['In a right-angled triangle the side opposite angle θ is '+o+' cm and the hypotenuse is '+h+' cm. Find θ.',ag,[r(Math.acos(o/h)*180/Math.PI),r(Math.atan(o/h)*180/Math.PI),r(90-ag)],['SOH: sin θ = O ÷ H = '+o+' ÷ '+h,'θ = sin⁻¹('+o+' ÷ '+h+')','θ = '+ag+'° (use the sin⁻¹ button on the calculator)'],'°']][R(0,2)]},'Trigonometry','SOH CAH TOA: sin = O/H · cos = A/H · tan = O/A\nUse sin⁻¹, cos⁻¹, tan⁻¹ to find angles.'],
+['Similar shapes & scale factors',2,()=>{let k=R(2,4),s=R(2,9),s2=R(3,10),A=R(4,20),V=R(3,12);return[['Two shapes are similar. A side of the small shape is '+s+' cm and the matching side of the large shape is '+s*k+' cm. Another side of the small shape is '+s2+' cm. How long is the matching side on the large shape?',s2*k,[s2+s*k-s,s2*k*k,s2*(k+1)],['Scale factor = large ÷ small = '+s*k+' ÷ '+s+' = '+k,'Multiply the other side: '+s2+' × '+k+' = '+s2*k+' cm'],' cm'],['Two similar shapes have a length scale factor of '+k+'. The small shape has area '+A+' cm². What is the area of the large shape?',A*k*k,[A*k,A*k**3,A+k*k],['Length scale factor k = '+k,'Area scale factor = k² = '+k*k,A+' × '+k*k+' = '+A*k*k+' cm²'],' cm²'],['Two similar solids have a length scale factor of '+k+'. The small solid has volume '+V+' cm³. What is the volume of the large solid?',V*k**3,[V*k,V*k*k,V*k*3],['Length scale factor k = '+k,'Volume scale factor = k³ = '+k**3,V+' × '+k**3+' = '+V*k**3+' cm³'],' cm³']][R(0,2)]},'Similar shapes','Scale factor k: lengths × k, areas × k², volumes × k³'],
+['Area, volume & circles',2,()=>{let r=R(2,10),h=R(2,10),r3=pick([3,6,9]),th=pick([30,60,90,120,180]),rr=pick([6,12]),z=' (leave π in your answer).';return[['Find the area of a circle with radius '+r+' cm'+z,r*r,[2*r,r,2*r*r],['Area = πr²','= π × '+r+'² = '+r*r+'π'],'π cm²'],['Find the circumference of a circle with radius '+r+' cm'+z,2*r,[r*r,r,4*r],['Circumference = 2πr','= 2 × π × '+r+' = '+2*r+'π'],'π cm'],['Find the volume of a cylinder with radius '+r+' cm and height '+h+' cm'+z,r*r*h,[2*r*h,r*h,r*r],['Volume = πr²h','= π × '+r+'² × '+h+' = '+r*r*h+'π'],'π cm³'],['Find the volume of a cone with radius '+r3+' cm and height '+h+' cm'+z,r3*r3*h/3,[r3*r3*h,r3*h,r3*r3*h/2],['Cone volume = ⅓πr²h','= ⅓ × π × '+r3+'² × '+h+' = '+r3*r3*h/3+'π'],'π cm³'],['A sector has radius '+rr+' cm and angle '+th+'°. Find its area'+z,rr*rr*th/360,[rr*rr,2*rr*th/360,rr*th/360],['Sector area = (θ/360) × πr²','= ('+th+'/360) × π × '+rr+'² = '+rr*rr*th/360+'π'],'π cm²']][R(0,4)]},'Area & volume formulas','Circle πr² · Circumference 2πr · Cylinder πr²h · Cone ⅓πr²h · Sector (θ/360)πr²']
+];
+const SC=['#5b5bf0','#0d9488','#ea7a1a'],SN=['Algebra','Algebraic Patterns','Geometric Reasoning'];
+let V='home',Q=null,FC={d:'n',s:-1,k:0,deck:[]};
+function mk(i){for(let n=0;;n++){let[q,a,w,st,u]=T[i][2](),num=typeof a=='number',f=v=>typeof v=='number'?(typeof u=='function'?u(v):N(v)+(u||'')):v;if(num&&a>0)w=w.filter(v=>v>0);if(num)for(let k=1;k<9;k++){w.push(a+k);if(a-k>0||a<=0)w.push(a-k)}let A=f(a),ws=[...new Set(w.map(f))].filter(x=>x!==A);if(ws.length<3&&n>150)while(ws.length<3)ws.push('Not sure '+ws.length);if(ws.length>=3)return{q,A,st,o:sh([A,...ws.slice(0,3)])}}}
+function start(i){let qs=[],tr=0,old=(S.lq=S.lq||{})[i]||[];while(qs.length<8){let x=mk(i);if((!qs.some(y=>y.q==x.q)&&!old.includes(x.q))||++tr>150)qs.push(x)}S.lq[i]=qs.map(y=>y.q);save();Q={i,qs,k:0,sc:0,f:1};go('q')}
+function pk(j){let q=Q.qs[Q.k];if(q.d)return;q.d=1;q.p=j;q.c=q.o[j]==q.A?1:0;if(q.c)Q.sc++;else q.sw=1;draw()}
+function hp(){let q=Q.qs[Q.k];q.sw=1;if(!q.d){q.d=1;q.hp=1;q.c=0;q.p=-1}draw()}
+function sw(){Q.qs[Q.k].sw=1;draw()}
+function nx(){if(Q.k<7){Q.k++;Q.f=1;go('q')}else{let p=S.p[Q.i]||{b:0,n:0};p.b=Math.max(p.b,Q.sc);p.n++;p.l=Q.sc;S.p[Q.i]=p;save();if(Q.sc>=6)boom();go('res')}}
+function boom(){for(let i=0;i<45;i++){let s=document.createElement('span');s.className='cf';s.textContent=pick(['🎉','⭐','✨','🎊','💫']);s.style.left=R(0,98)+'vw';s.style.animationDelay=R(0,10)/10+'s';document.body.appendChild(s);setTimeout(()=>s.remove(),3600)}}
+function home(){let m=T.filter((_,i)=>(S.p[i]||{}).b>=6).length,att=Object.values(S.p).reduce((a,x)=>a+x.n,0);
+let h='<section class="hero up"><div><h1>Year 11 Maths Revision</h1><p>Pick a topic and take an 8-question quiz. Every attempt has brand-new questions, and a wrong answer shows you the full working.</p></div><div class="stat"><b>'+m+'/'+T.length+'</b><span>topics mastered</span><div class="bar"><i style="width:'+m/T.length*100+'%"></i></div><small style="color:#fffc">'+att+' quizzes done · mastered = 6/8 or better</small></div></section>';
+SN.forEach((s,si)=>{let ids=T.map((_,i)=>i).filter(i=>T[i][1]==si),mm=ids.filter(i=>(S.p[i]||{}).b>=6).length;h+='<h2 style="--c:'+SC[si]+'">'+s+' <small>'+mm+'/'+ids.length+' mastered</small></h2><div class="grid">'+ids.map((i,n)=>{let p=S.p[i];return'<button class="card hv up" style="--c:'+SC[si]+';animation-delay:'+n*40+'ms" onclick="start('+i+')"><span class="nm">'+T[i][0]+'</span><div class="bar"><i style="width:'+(p?p.b/8*100:0)+'%"></i></div><small>'+(p?'Best '+p.b+'/8 · '+p.n+' attempt'+(p.n>1?'s':''):'Not started')+'</small>'+(p&&p.b>=6?'<em>✓</em>':'')+'</button>'}).join('')+'</div>'});h+='<h2 style="--c:#e11d48">Diagram flashcards <small>questions with diagrams, flip for the answer and working</small></h2><div class="grid">'+Object.keys(DK).map((k,n)=>'<button class="card hv up" style="--c:'+DK[k].col+';animation-delay:'+n*40+'ms" onclick="fcStart(-1,\''+k+'\')"><span class="nm">'+DK[k].e+' '+DK[k].n+'</span><small>'+DK[k].c.length+' cards with diagrams</small></button>').join('')+'</div>';return h}
+function quiz(){let q=Q.qs[Q.k],t=T[Q.i],c=SC[t[1]],fb='',st='',bt='';
+if(q.d){fb='<div class="fb '+(q.hp?'hp':q.c?'ok':'no')+'">'+(q.hp?'No worries — here is how to do it 👇':q.c?'✓ Correct! Nice one.':'✗ Not quite — the answer is '+E(q.A)+'. Here is the working:')+'</div>'}
+if(q.sw)st='<ol class="steps">'+q.st.concat(['Final answer: '+q.A]).map((s,i)=>'<li style="animation-delay:'+i*120+'ms">'+E(s)+'</li>').join('')+'</ol>';
+if(!q.d)bt='<button class="btn hv" onclick="hp()">💡 I need help — show working</button>';else{if(!q.sw)bt+='<button class="btn hv" onclick="sw()">📝 See the working</button>';bt+='<button class="btn pri hv" onclick="nx()">'+(Q.k<7?'Next →':'Finish ✓')+'</button>'}
+return'<div class="'+(Q.f?'up':'')+'" style="--c:'+c+'"><div class="top"><button class="btn hv" onclick="go(\'home\')">← Topics</button><b>'+t[0]+'</b><span class="pill">Score '+Q.sc+'</span></div><div class="bar"><i style="width:'+(Q.k+(q.d?1:0))/8*100+'%"></i></div><p class="mu">Question '+(Q.k+1)+' of 8'+(q.hp?' · helped (not scored)':'')+'</p><div class="qbox">'+E(q.q)+'</div><div class="opts">'+q.o.map((o,j)=>'<button class="opt hv '+(q.d?o==q.A?'good':j==q.p?'bad':'dim':'')+'" onclick="pk('+j+')"><i>'+'ABCD'[j]+'</i>'+E(o)+'</button>').join('')+'</div>'+fb+st+'<div class="row">'+bt+'</div></div>'}
+function res(){let t=T[Q.i],c=SC[t[1]],s=Q.sc;return'<div class="up" style="--c:'+c+';text-align:center"><h2 style="text-align:left">'+t[0]+' — results</h2><div class="ring" style="--p:'+s/8*100+'"><b>'+s+'/8</b></div><h3>'+(s==8?'Perfect score! 🌟':s>=6?'Great work — topic mastered! 🎉':s>=4?'Getting there — review the working and go again 💪':'Keep going — check the flashcards, then retry 📚')+'</h3><p class="mu">Questions you needed help with: '+Q.qs.filter(q=>q.hp).length+'. Your best: '+S.p[Q.i].b+'/8.</p><div class="row" style="justify-content:center"><button class="btn pri hv" onclick="start('+Q.i+')">🔄 New questions</button><button class="btn hv" onclick="go(\'home\')">All topics</button><button class="btn hv" onclick="start('+(Q.i+1)%T.length+')">Next topic →</button></div></div>'}
+function fcStart(s=-1,d='n'){FC=d=='n'?{d,s,k:0,deck:T.map((_,i)=>i).filter(i=>s<0||T[i][1]==s)}:{d,s:-1,k:0,deck:DK[d].c.map((_,i)=>i)};go('fc')}
+function fn(d){FC.k=(FC.k+d+FC.deck.length)%FC.deck.length;FC.an=1;go('fc')}
+function ff(){$('.fcard').classList.toggle('flip')}
+function fm(v){let i=fkey();if(v)S.fk[i]=1;else delete S.fk[i];save();fn(1)}
+function shf(){sh(FC.deck);FC.k=0;FC.an=1;go('fc')}
+function nt(v){S.nt[fkey()]=v;save()}
+function fkey(){return FC.d=='n'?FC.deck[FC.k]:FC.d+FC.deck[FC.k]}
+function qz(cd){let t=cd.t;return FC.d!='nc'?25:/Parallel/.test(t)?23:/Polygons/.test(t)?24:/Pythagoras/.test(t)?26:/Trig/.test(t)?27:/similar/.test(t)?28:/Angles and|Triangles/.test(t)?22:-1}
+function fcv(){let n=FC.d=='n',j=FC.deck[FC.k],key=fkey(),dk=n?0:DK[FC.d],cd=n?0:dk.c[j],t=n?T[j]:0,c=n?SC[t[1]]:dk.col,a=FC.an,qi=n?j:qz(cd),known=FC.deck.filter(x=>S.fk[n?x:FC.d+x]).length,front,back;FC.an=0;
+if(n){front='<h3>'+E(t[3])+'</h3>';back='<span class="chip">Notes</span><p style="white-space:pre-line">'+E(t[4])+'</p>'}
+else{front='<div class="dgi"><div class="dsv">'+cd.s(0)+'</div><div><span class="chip">'+E(cd.t)+'</span><p class="dq">'+E(cd.q)+'</p></div></div>';back='<div class="dgi"><div class="dsv">'+cd.s(1)+'</div><div><span class="chip">'+E(cd.t)+'</span><p class="da">'+E(cd.a)+'</p><p class="dw">'+E(cd.w)+'</p>'+(cd.u?'<small>'+E(cd.u)+'</small>':'')+'</div></div>'}
+return'<div style="--c:'+c+'"><div class="top up"><h2 style="--c:'+c+'">Flashcards</h2>'+(n?'<select onchange="fcStart(+this.value)"><option value="-1">All topics</option>'+SN.map((s,k)=>'<option value="'+k+'"'+(FC.s==k?' selected':'')+'>'+s+'</option>').join('')+'</select>':'')+'</div><div class="row up" style="margin:0 0 6px">'+[['n','📝 Topic notes']].concat(Object.keys(DK).map(k=>[k,DK[k].e+' '+DK[k].n])).map(x=>'<button class="tab hv'+(FC.d==x[0]?' on':'')+'" onclick="fcStart(-1,\''+x[0]+'\')">'+x[1]+'</button>').join('')+'</div><p class="mu">Card '+(FC.k+1)+' of '+FC.deck.length+' · '+known+' marked as known'+(S.fk[key]?' · ✅ this one':'')+'</p><div class="scene '+(a?'slide':'up')+(n?'':' dg')+'" onclick="ff()"><div class="fcard"><div class="face"><span class="chip">'+(n?SN[t[1]]:dk.n)+' · tap to flip</span>'+front+'</div><div class="face back'+(n?'':' dgb')+'">'+back+'</div></div></div><div class="row"><button class="btn hv" onclick="fn(-1)">← Prev</button><button class="btn hv" onclick="fm(0)">🔁 Practise again</button><button class="btn hv" onclick="fm(1)">✅ Got it</button><button class="btn hv" onclick="fn(1)">Next →</button><button class="btn hv" onclick="shf()">🔀 Shuffle</button>'+(qi>=0?'<button class="btn pri hv" onclick="start('+qi+')">Quiz this topic ▶</button>':'')+'</div><p style="margin-bottom:0"><b>My notes</b> <small>(saved automatically)</small></p><textarea oninput="nt(this.value)" placeholder="Type your own tips or worked examples here…">'+E(S.nt[key]||'')+'</textarea></div>'}
+function go(v){V=v;draw();scrollTo({top:0})}
+function draw(){$('#app').innerHTML=V=='home'?home():V=='q'?quiz():V=='res'?res():fcv();$('#t0').classList.toggle('on',V!='fc');$('#t1').classList.toggle('on',V=='fc');if(Q)Q.f=0}
+function th(){let d=document.documentElement,dk=d.dataset.theme=='dark'||(!d.dataset.theme&&matchMedia('(prefers-color-scheme:dark)').matches);d.dataset.theme=dk?'light':'dark'}
+/* tools */
+let cur='calc';
+function tool(n,f){let d=$('#dr');if(d.classList.contains('on')&&cur==n&&!f){d.classList.remove('on');return}cur=n;d.classList.add('on');$('#calc').style.display=n=='calc'?'':'none';$('#pad').style.display=n=='pad'?'':'none';$('#dt').textContent=n=='calc'?'🧮 Calculator':'✏️ Notepad'}
+const dh=$('#dh');let dg=null;dh.onpointerdown=e=>{if(e.target.closest('button'))return;let r=$('#dr').getBoundingClientRect();dg=[e.clientX-r.left,e.clientY-r.top];dh.setPointerCapture(e.pointerId)};dh.onpointermove=e=>{if(dg){let d=$('#dr');d.style.left=e.clientX-dg[0]+'px';d.style.top=e.clientY-dg[1]+'px';d.style.right=d.style.bottom='auto'}};dh.onpointerup=()=>dg=null;
+let ce='',ans=0,dn=0;const FN={sin:x=>Math.sin(x*Math.PI/180),cos:x=>Math.cos(x*Math.PI/180),tan:x=>Math.tan(x*Math.PI/180),asin:x=>Math.asin(x)*180/Math.PI,acos:x=>Math.acos(x)*180/Math.PI,atan:x=>Math.atan(x)*180/Math.PI,sqrt:Math.sqrt};
+$('#ck').innerHTML=[['sin','cos','tan','(',')'],['sin⁻¹','cos⁻¹','tan⁻¹','√','π'],['7','8','9','⌫','C'],['4','5','6','×','÷'],['1','2','3','+','−'],['0','.','^','Ans','=']].flat().map(k=>'<button class="'+('×÷+−^'.includes(k)?'op':k=='='?'eq':'')+'" onclick="kp(\''+k+'\')">'+k+'</button>').join('');
+function ev(){try{let e=ce.replace(/(\d|\)|π|Ans)(?=[(π√A]|sin|cos|tan)/g,'$1*').replace(/\)(?=\d)/g,')*').replace(/×/g,'*').replace(/÷/g,'/').replace(/−/g,'-').replace(/\^/g,'**').replace(/π/g,'('+Math.PI+')').replace(/Ans/g,'('+ans+')').replace(/√\(/g,'FN.sqrt(').replace(/(sin|cos|tan)⁻¹\(/g,'FN.a$1(').replace(/(?<![a-z.])(sin|cos|tan)\(/g,'FN.$1(');let r=Function('FN','return '+e)(FN);if(!isFinite(r))throw 0;r=+r.toPrecision(10);ans=r;$('#cr').textContent='= '+r}catch(x){$('#cr').textContent='Error'}dn=1}
+function kp(k){if(k=='C'){ce='';$('#cr').textContent='';dn=0}else if(k=='⌫')ce=ce.replace(/(sin⁻¹\(|cos⁻¹\(|tan⁻¹\(|sin\(|cos\(|tan\(|√\(|Ans|.)$/,'');else if(k=='=')ev();else{let f=['sin','cos','tan','sin⁻¹','cos⁻¹','tan⁻¹','√'].includes(k)?k+'(':k;if(dn){ce='+−×÷^'.includes(k)?'Ans':'';dn=0}ce+=f}$('#ce').textContent=ce||'0'}
+onkeydown=e=>{if(/INPUT|TEXTAREA|SELECT/.test(e.target.tagName))return;let k=e.key;if(V=='fc'&&!$('#dr').classList.contains('on')){if(k=='ArrowRight')fn(1);else if(k=='ArrowLeft')fn(-1)}
+if($('#dr').classList.contains('on')&&cur=='calc'){if(/^[0-9.()+]$/.test(k))kp(k);else if(k=='-')kp('−');else if(k=='*')kp('×');else if(k=='/')kp('÷');else if(k=='^')kp('^');else if(k=='Enter'||k=='=')kp('=');else if(k=='Backspace')kp('⌫');else return;e.preventDefault()}};
+const cv=$('#cv'),cx=cv.getContext('2d'),ring=$('#ring');let sz={pen:3,er:24},tl='pen',col='#1d2340',dw=0,un=[];
+$('#sws').innerHTML=['#1d2340','#e11d48','#2563eb','#16a34a'].map(c=>'<button class="sw hv" style="background:'+c+'" onclick="col=\''+c+'\';stl(\'pen\')"></button>').join('');
+function pvz(){let s=Math.min(sz[tl],36);$('#pv').style.cssText='width:'+s+'px;height:'+s+'px'}
+function stl(t){tl=t;$('#bp').classList.toggle('on',t=='pen');$('#be').classList.toggle('on',t=='er');$('#sl').value=sz[t];pvz()}
+function ssz(v){sz[tl]=v;pvz()}pvz();
+const pos=e=>{let r=cv.getBoundingClientRect();return[(e.clientX-r.left)*cv.width/r.width,(e.clientY-r.top)*cv.height/r.height,cv.width/r.width,r]};
+cv.onpointerdown=e=>{cv.setPointerCapture(e.pointerId);un.push(cx.getImageData(0,0,cv.width,cv.height));if(un.length>25)un.shift();dw=1;let[x,y]=pos(e);cx.lineCap=cx.lineJoin='round';cx.lineWidth=sz[tl];cx.strokeStyle=col;cx.globalCompositeOperation=tl=='er'?'destination-out':'source-over';cx.beginPath();cx.moveTo(x,y);cx.lineTo(x+.01,y);cx.stroke()};
+cv.onpointermove=e=>{let[x,y,k,r]=pos(e);ring.style.cssText='display:block;width:'+sz[tl]/k+'px;height:'+sz[tl]/k+'px;left:'+(e.clientX-r.left)+'px;top:'+(e.clientY-r.top)+'px';if(dw){cx.lineTo(x,y);cx.stroke();cx.beginPath();cx.moveTo(x,y)}};
+cv.onpointerup=()=>dw=0;cv.onpointerleave=()=>ring.style.display='none';
+function und(){if(un.length)cx.putImageData(un.pop(),0,0)}
+function clr(){un.push(cx.getImageData(0,0,cv.width,cv.height));cx.clearRect(0,0,cv.width,cv.height)}
+draw();
+</script></body></html>
